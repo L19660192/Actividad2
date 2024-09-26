@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambiar color de fondo</title>
+    <script>
+        
+        function generarColorAleatorio() {
+            const letras = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letras[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+       
+        function cambiarColorFondo() {
+            const colorAleatorio = generarColorAleatorio();
+            document.body.style.backgroundColor = colorAleatorio;
+        }
+    </script>
+</head>
+<body>
+    <h1>Cambiar color</h1>
+    
+    <button onclick="cambiarColorFondo()">Cambiar color de fondo</button>
+</body>
+</html>
